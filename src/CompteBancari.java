@@ -103,8 +103,4 @@ public class CompteBancari {
         }
         return resultat;
     }
-    
-    public String saludo(){
-        return "Hola que tal!";
-    }
 }
