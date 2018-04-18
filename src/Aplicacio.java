@@ -17,7 +17,7 @@ public class Aplicacio {
         int numero = cLlegir.datoInt();
         System.out.println(".................................................");
         CompteBancari compte = new CompteBancari(nom, numero);
-
+        System.out.println(compte.welcome());
         System.out.println("Introdueix la quantitat a ingressar: ");
         float quantitat = cLlegir.datoFloat();
         boolean resultat = compte.ingressar(quantitat);

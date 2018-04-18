@@ -103,4 +103,7 @@ public class CompteBancari {
         }
         return resultat;
     }
+    public String welcome(){
+        return "WELCOM SR/SRA " + this.nom;
+    }
 }
