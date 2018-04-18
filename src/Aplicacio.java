@@ -41,5 +41,42 @@ public class Aplicacio {
             System.out.println(compte.mostrarDades());
         }
         System.out.println(".................................................");
+        
+        
+         System.out.println("Introdueix el nom del propietari: ");
+        nom = cLlegir.dato();
+        System.out.println(".................................................");
+        System.out.println("Introdueix el número secret del propietari: ");
+        numero = cLlegir.datoInt();
+        System.out.println(".................................................");
+        
+        CompteBancari Comptenum2 = new CompteBancari(nom, numero);
+        
+        System.out.println("Introdueix la quantitat a trespassar: ");
+        quantitat = cLlegir.datoFloat();
+        resultat = compte.extreure(quantitat);
+        
+        if (resultat == false) {
+            System.out.println("No s'ha pogut realitzar el traspas");
+        } else if (compte.consultarSaldo() < 0) {
+            System.out.println("El saldo final del compte és negatiu: " + compte.consultarSaldo());
+        } else {   
+            resultat = Comptenum2.ingressar(quantitat);
+            if(resultat == false){
+                System.out.println("No s'ha pogut realitzar el traspas");
+            }else{
+                System.out.println("Traspas realitzat correctament.");
+            }
+            System.out.println("Primer compte");
+            System.out.println(compte.mostrarDades());
+            System.out.println("Segon compte");
+            System.out.println(Comptenum2.mostrarDades());
+        }
+        
+        
+        System.out.println(".................................................");
+        
+        
+        
     }
 }
